@@ -1,0 +1,30 @@
+.head{
+    --background: blue;
+    color: white;
+    font-weight: bolder;
+	font-size: 15%;
+	font-family: sans-serif;
+}
+.content{
+    --background: rgb(82, 223, 248);
+}
+ion-title{
+    color: white;
+    font-weight: bolder;
+	font-size: 25px;
+	font-family: sans-serif;
+}
+ion-img{
+    margin-left: 65px;
+    height: 12%;
+    width: 12%;
+    float:left;
+}
+p{
+    font-size: 21px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    font-family: cursive;
+    margin-left:10px;
+    font-style: italic;
+}

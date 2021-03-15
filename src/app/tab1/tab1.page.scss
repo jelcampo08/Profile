@@ -1,0 +1,39 @@
+ion-img{
+	height: 150px;
+	width: 40%;
+	margin-left: 30%;
+}
+h3{
+    font-weight: bolder;
+	font-size: 25px;
+	font-family: sans-serif;
+    color: blue;  
+}
+h1{
+	font-weight: bolder;
+	margin-left: 30%;
+	font-family: sans-serif;
+    color: rgb(0, 0, 0);
+}
+.head{
+    --background: blue;
+    color: white;
+    font-weight: bolder;
+	font-size: 15%;
+	font-family: sans-serif;
+}
+.content{
+    --background: rgb(134, 227, 255);
+}
+p{
+    font-family: cursive;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+}
+ion-title{
+    color: white;
+    font-weight: bolder;
+	font-size: 25px;
+	font-family: sans-serif;
+}
