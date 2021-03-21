@@ -1,28 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="head">
     <ion-title>
-      Contact
+      Contact List
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-  </ion-header>
-    <ion-toolbar class="content">
-  <ion-img src="assets/img/fb3.png"></ion-img>
-  <p>Jelma Belita Campo</p><br>
-  <ion-img src="assets/img/email.png"></ion-img>
-  <p>jelma.campo@evsu.edu.ph</p>
-  <ion-img src="assets/img/insta2.png"></ion-img>
-  <p>jelmspark</p><br>
-  <ion-img src="assets/img/twit.png"></ion-img>
-  <p>jelmsparker</p>
-  <ion-img src="assets/img/snap.png"></ion-img>
-  <p>jelms_park2000</p><br>
-  <ion-img src="assets/img/watt.png"></ion-img>
-  <p>jelcampo</p>
-  <ion-img src="assets/img/phone4.png"></ion-img>
-  <p>09263663442</p>
-</ion-toolbar>
+<ion-content >
+  <ion-card class="cover">
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Contact Name</ion-label>
+        <ion-input [(ngModel)]="contName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contact Number</ion-label>
+        <ion-input [(ngModel)]="contNumber"></ion-input>
+      </ion-item>
+      <br/>
+      <ion-button expand="full" fill="solid" color="success" (click)="saveContact()">SAVE CONTACT</ion-button>
+      
+      <ion-list>
+        <ion-item-sliding id="item100"  *ngFor="let cont of contacts">
+          <ion-item href="#">
+            <ion-avatar slot="start">
+              <img src="assets/img/icon5.png">
+            </ion-avatar>
+            <ion-label>
+              <h3>{{cont.name}}</h3>
+              <p>{{cont.number}}</p>
+            </ion-label>
+          </ion-item>
+          
+          <ion-item-options side="end">
+            <ion-item-option color="danger" (click)="confirmDelete(cont)">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-item-option>
+          <ion-item-option>
+            <ion-icon slot="icon-only" name="mail"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>    
+      </ion-item-sliding>
+    </ion-list>
+    
+    </ion-card-content>
+  </ion-card>
 </ion-content>
