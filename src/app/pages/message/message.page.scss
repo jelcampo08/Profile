@@ -1,0 +1,40 @@
+.message{
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 4px;
+    white-space: pre-wrap;
+}
+.mymsg{
+    background: rgb(225, 138, 122);
+    color: #fff;
+}
+.msgbox{
+    width: 100%;
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 10px;
+    background: #fff;
+    resize: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.head{
+    --background:  rgb(167, 141, 138);
+    color: white;
+    font-weight: bolder;
+	font-size: 15%;
+	font-family: sans-serif;
+}
+.box{
+    --background: rgb(192, 216, 227);
+}
+.msgbtn{
+    --background:  rgb(11, 235, 48);
+}
+.whole{
+    --background:  rgb(231, 241, 245);
+}
+.time{
+    color:rgb(230, 213, 213);
+    float: right;
+    font-size: small;
+}
