@@ -1,15 +1,12 @@
 import { Injectable } from '@angular/core';
-import {Plugins} from '@capacitor/core';
-const { Camera, Filesystem, Storage } = Plugins;
+import { Appointment } from '../shared/Appointment';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
-import { ConvertActionBindingResult } from '@angular/compiler/src/compiler_util/expression_converter';
-import { Contact } from './contact';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class ContactServiceService {
+export class AppointmentService {
   contactListRef: AngularFireList<any>;
   contactRef: AngularFireObject<any>;
   aptService: any;
@@ -17,28 +14,28 @@ export class ContactServiceService {
   constructor(private db: AngularFireDatabase) { }
 
   // Create
-  createContact(cont: Contact) {
+  createContact(apt: Appointment) {
     return this.contactListRef.push({
-      name: cont.name,
-      mobile: cont.mobile
+      name: apt.name,
+      mobile: apt.mobile
     })
   }
 
   // Get Single
   getContact(id: string) {
-    this.contactRef = this.db.object('/contact/' + id);
+    this.contactRef = this.db.object('/appointment/' + id);
     return this.contactRef;
   }
 
   // Get List
   getContactList() {
-    this.contactListRef = this.db.list('/contact');
+    this.contactListRef = this.db.list('/appointment');
     return this.contactListRef;
   }
 
   // Delete
   deleteContact(id: string) {
-    this.contactRef = this.db.object('/contact/' + id);
+    this.contactRef = this.db.object('/appointment/' + id);
     this.contactRef.remove();
   }
 }
